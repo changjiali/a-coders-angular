@@ -1,0 +1,35 @@
+<table class="table">
+  <tr>
+    <th>Created on</th>
+    <th>Instrument</th>
+    <th>Ticker</th>
+    <th>Type</th>
+    <th>Price</th>
+    <th>Quantity</th>
+    <th>Status</th>
+  </tr>
+  <tr *ngFor="let trade of tradeHistory | async; let i=index">
+    <td>
+      {{trade.created}}
+    </td>
+    <td>
+      {{trade.instrument}}
+    </td>
+    <td>
+      {{trade.ticker}}
+    </td>
+    <td>
+      {{trade.type}}
+    </td>
+    <td>
+      {{trade.price}}
+    </td>
+    <td>
+      {{trade.quantity}}
+    </td>
+    <td>
+      {{trade.state}}
+    </td>
+  </tr>
+
+</table>

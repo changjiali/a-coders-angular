@@ -24,13 +24,9 @@ export class MarketdataComponent {
   }
 
   tradeCreation(data: MarketData): void {
-    const httpHeaders: HttpHeaders = new HttpHeaders({ token: 'amFuaWNl4oiRYW1GdWFXTmw=' });
-    const body = {type: 'SELL', ticker: data.ticker, quantity: data.quantity, price: data.quotePrice, instrument: data.instrument};
-    this.httpClient.post(this.url, body, {headers: httpHeaders}).subscribe((val) => {console.log('POST SUCCESS', val); },
-      response => {
-        console.log('POST call in error', response); },
-      () => {
-        console.log('POST is completed');
-      });
+    const httpHeaders: HttpHeaders = new HttpHeaders({ token: 'amVubnniiJFhbVZ1Ym5rPQ==' });
+    const body = {type: 'BUY', ticker: data.ticker, quantity: data.quantity, price: data.quotePrice, instrument: data.instrument};
+    this.httpClient.post(this.url, body, {headers: httpHeaders}).subscribe((data2:any) =>
+      console.log(data2));
   }
 }

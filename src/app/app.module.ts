@@ -6,11 +6,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MarketdataComponent } from './marketdata/marketdata.component';
 import {FormsModule} from '@angular/forms';
+import { TradeHistoryComponent } from './trade-history/trade-history.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MarketdataComponent
+    MarketdataComponent,
+    TradeHistoryComponent
   ],
   imports: [
     BrowserModule,

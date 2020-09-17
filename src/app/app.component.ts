@@ -4,6 +4,8 @@ import {MarketData} from './marketdata';
 import {MarketDataService} from './marketdata.service';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {URLs} from '../environments/environment';
+import {TradeHistory} from './trade-history';
+import {TradeHistoryService} from './trade-history.service';
 
 @Component({
   selector: 'app-root',
@@ -13,5 +15,5 @@ import {URLs} from '../environments/environment';
 export class AppComponent {
   title = 'frontendapp';
 
-  constructor(){}
+  constructor() {}
 }

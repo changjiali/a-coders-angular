@@ -1,0 +1,49 @@
+<table class="table">
+  <tr>
+    <th>Last Scrape Time</th>
+    <th>Instrument</th>
+    <th>Ticker</th>
+    <th>Quote Price</th>
+    <th>Volume</th>
+    <th>Open</th>
+    <th>Previous Close</th>
+    <th>PE Ratio</th>
+    <th>Quantity</th>
+    <th>Buy?</th>
+  </tr>
+  <tr *ngFor="let data of marketData | async; let i=index">
+    <td>
+      {{data.lastScrapeTime}}
+    </td>
+    <td>
+      {{data.instrument}}
+    </td>
+    <td>
+      {{data.ticker}}
+    </td>
+    <td>
+      {{data.quotePrice}}
+    </td>
+    <td>
+      {{data.volume}}
+    </td>
+    <td>
+      {{data.open}}
+    </td>
+    <td>
+      {{data.previousClose}}
+    </td>
+    <td>
+      {{data.peRatio}}
+    </td>
+    <td>
+      <form>
+        <input type="number" min="1" style="width: 60px" class="form-control" id="quantity" name="quantity-{{i}}" [(ngModel)]="data.quantity">
+      </form>
+    </td>
+    <td>
+      <button type="button" (click)="tradeCreation(data)">Buy</button>
+    </td>
+  </tr>
+
+</table>

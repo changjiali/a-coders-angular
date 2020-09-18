@@ -1,0 +1,35 @@
+<p>holding-asset works!</p>
+
+<table class="table">
+  <tr>
+    <th>Instrument</th>
+    <th>Ticker</th>
+    <th>Quantity</th>
+    <th>Market Price (USD)</th>
+    <th>Quantity</th>
+    <th>Sell</th>
+  </tr>
+  <tr *ngFor="let asset of holdingAsset | async; let i=index" >
+    <td>
+      {{asset.instrument}}
+    </td>
+    <td>
+      {{asset.ticker}}
+    </td>
+    <td>
+      {{asset.quantity}}
+    </td>
+    <td>
+      {{asset.price}}
+    </td>
+    <td>
+      <form>
+        <input type="number" min="1" style="width: 60px" class="form-control" id="quantity" name="quantity-{{i}}" [(ngModel)]="asset.inputQuantity">
+      </form>
+    </td>
+    <td>
+      <button type="button" (click)="sellHoldingAsset(asset)">Sell</button>
+    </td>
+  </tr>
+
+</table>

@@ -13,6 +13,7 @@ import { HomeComponent } from './home/home.component';
 import { AlertComponent } from './alert/alert.component';
 import { RouterModule } from '@angular/router';
 import { HistoryComponent } from './history/history.component';
+import { HoldingAssetComponent } from './holding-asset/holding-asset.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { HistoryComponent } from './history/history.component';
     RegisterComponent,
     HomeComponent,
     AlertComponent,
-    HistoryComponent
+    HistoryComponent,
+    HoldingAssetComponent
   ],
   imports: [
     BrowserModule,

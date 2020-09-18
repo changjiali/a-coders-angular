@@ -16,7 +16,7 @@ export class UserService {
     //    return this.http.get<User[]>(`${config.apiUrl}/users`);
     //}
 
-    register(username: String, password: String, email: String): Observable<any>{
+    register(email: String, username: String, password: String): Observable<any>{
         let obj =  this.http.post(this.url, {username:username,password:password,email:email})
         //console.log('username',username,'password',password,'email',email);
         //console.log("user.service register obj", JSON.stringify(obj));

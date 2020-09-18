@@ -9,15 +9,17 @@ import {Portfolio} from './portfolio';
 })
 export class PortfolioService {
   private url = URLs.portfolioService;
-  
+
   constructor(private httpClient: HttpClient) { }
   getPortfolio(): Observable<Array<Portfolio>> {
     const currentToken = JSON.parse(localStorage.getItem('currentToken'));
     const username = JSON.parse(localStorage.getItem('username'));
-    const httpHeaders: HttpHeaders = new HttpHeaders({token: currentToken});
+    const httpHeaders: HttpHeaders = new HttpHeaders({token: currentToken.token});
     console.log(httpHeaders);
-    console.log(username);    
-    let observableResult = this.httpClient.get(this.url + username + '/portfolio', {headers: httpHeaders}) as Observable<Array<Portfolio>>;
+    console.log(username);
+    console.log(currentToken);
+    console.log(currentToken.token);
+    const observableResult = this.httpClient.get(this.url + username + '/portfolio', {headers: httpHeaders}) as Observable<Array<Portfolio>>;
     return observableResult;
   }
 }

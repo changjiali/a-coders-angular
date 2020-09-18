@@ -49,7 +49,7 @@ export class RegisterComponent implements OnInit {
         }
 
         this.loading = true;
-        this.userService.register(this.registerForm.value.username,this.registerForm.value.email,this.registerForm.value.password)
+        this.userService.register(this.registerForm.value.email,this.registerForm.value.username,this.registerForm.value.password)
             .pipe(first())
             .subscribe(
                 data => {

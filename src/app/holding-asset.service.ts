@@ -15,8 +15,11 @@ export class HoldingAssetService {
   constructor(private httpClient: HttpClient) { }
 
   getHoldingAsset(): Observable<Array<HoldingAsset>> {
-    let username = 'jack/holdingStock';
-    const httpHeaders: HttpHeaders = new HttpHeaders({ token: 'amFja+KIkWFtRmphdz09' });
+    const currentToken = JSON.parse(localStorage.getItem('currentToken'));
+    const username = JSON.parse(localStorage.getItem('username'));
+    const httpHeaders: HttpHeaders = new HttpHeaders({ token: currentToken.token });
+    console.log(currentToken);
+    console.log(currentToken.token);
     let observableResult = this.httpClient.get(this.url + username, {headers: httpHeaders}) as Observable<Array<HoldingAsset>>;
     return observableResult;
   }

@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-import { FormBuilder, FormGroup, Validators, REACTIVE_FORM_DIRECTIVES, ReactiveFormsModule, FormsModule  } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators, ReactiveFormsModule, FormsModule  } from '@angular/forms';
 import { first } from 'rxjs/operators';
 import { AlertService } from '../alert.service';
 import { AuthenticationService } from '../authentication.service';
 
-@Component({ 
+@Component({
   selector: 'app-login',
-  templateUrl: 'login.component.html' 
+  templateUrl: 'login.component.html'
 })
 export class LoginComponent implements OnInit {
     loginForm: FormGroup;
@@ -57,12 +57,12 @@ export class LoginComponent implements OnInit {
             //.pipe(first())
             .subscribe(
                 data => {
-                    console.log("log servise value", data)
+                    console.log('log servise value', data)
                     this.router.navigate([this.returnUrl]);
                 },
                 error => {
                     this.alertService.error(error);
-                    console.log("login.components", error)
+                    console.log('login.components', error);
                     this.loading = false;
                 });
         //this.authenticationService.login(this.f.username.value, this.f.password.value)

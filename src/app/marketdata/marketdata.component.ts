@@ -27,7 +27,7 @@ export class MarketdataComponent {
     const currentToken = JSON.parse(localStorage.getItem('currentToken'));
     const httpHeaders: HttpHeaders = new HttpHeaders({token: currentToken.token });
     const body = {type: 'BUY', ticker: data.ticker, quantity: data.quantity, price: data.quotePrice, instrument: data.instrument};
-    this.httpClient.post(this.url, body, {headers: httpHeaders}).subscribe((data2:any) =>
-      console.log(data2));
+    this.httpClient.post(this.url, body, {headers: httpHeaders}).subscribe(res => alert('Submitted successfully!'),
+        error => alert(error.error));
   }
 }

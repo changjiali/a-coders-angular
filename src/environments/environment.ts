@@ -7,12 +7,12 @@ export const environment = {
 };
 
 export const URLs = {
-  marketDataService: 'http://ip172-18-0-41-bti22pjoudsg00f9q5hg-8080.direct.labs.play-with-docker.com/api/market/data',
-  tradeService: 'http://ip172-18-0-41-bti22pjoudsg00f9q5hg-8080.direct.labs.play-with-docker.com/api/trade',
-  tradeHistoryService: 'http://ip172-18-0-41-bti22pjoudsg00f9q5hg-8080.direct.labs.play-with-docker.com/api/trade/',
-  registerService: 'http://ip172-18-0-41-bti22pjoudsg00f9q5hg-8080.direct.labs.play-with-docker.com/api/auth/register',
-  loginService: 'http://ip172-18-0-41-bti22pjoudsg00f9q5hg-8080.direct.labs.play-with-docker.com/api/auth/login',
-  portfolioService: 'http://ip172-18-0-41-bti22pjoudsg00f9q5hg-8080.direct.labs.play-with-docker.com/api/trade/'
+  marketDataService: 'http://ip172-18-0-71-bti2ve3oudsg00f9q79g-8080.direct.labs.play-with-docker.com/api/market/data',
+  tradeService: 'http://ip172-18-0-71-bti2ve3oudsg00f9q79g-8080.direct.labs.play-with-docker.com/api/trade',
+  tradeHistoryService: 'http://ip172-18-0-71-bti2ve3oudsg00f9q79g-8080.direct.labs.play-with-docker.com/api/trade/',
+  registerService: 'http://ip172-18-0-71-bti2ve3oudsg00f9q79g-8080.direct.labs.play-with-docker.com/api/auth/register',
+  loginService: 'http://ip172-18-0-71-bti2ve3oudsg00f9q79g-8080.direct.labs.play-with-docker.com/api/auth/login',
+  portfolioService: 'http://ip172-18-0-71-bti2ve3oudsg00f9q79g-8080.direct.labs.play-with-docker.com/api/trade/'
 };
 /*
  * For easier debugging in development mode, you can import the following file

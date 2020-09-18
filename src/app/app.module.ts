@@ -14,6 +14,9 @@ import { AlertComponent } from './alert/alert.component';
 import { RouterModule } from '@angular/router';
 import { HistoryComponent } from './history/history.component';
 import { HoldingAssetComponent } from './holding-asset/holding-asset.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { PortfolioComponent } from './portfolio/portfolio.component';
+import { SellComponent } from './sell/sell.component';
 
 
 @NgModule({
@@ -26,7 +29,10 @@ import { HoldingAssetComponent } from './holding-asset/holding-asset.component';
     HomeComponent,
     AlertComponent,
     HistoryComponent,
-    HoldingAssetComponent
+    PortfolioComponent,
+    DashboardComponent,
+    HoldingAssetComponent,
+    SellComponent
   ],
   imports: [
     BrowserModule,

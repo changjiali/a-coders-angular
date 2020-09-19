@@ -4,11 +4,10 @@
 
 export const environment = {
   production: false,
-  baseUrl: '$API_URL'
+  baseUrl: 'http://localhost:8080/'
 };
 
 export const URLs = {
-  baseUrl: 'http://ip172-18-0-10-btiohg5im9m000eolp00-8080.direct.labs.play-with-docker.com/',
   marketDataEndpoint: 'api/market/data',
   tradeEndpoint: 'api/trade',
   tradeHistoryEndpoint: 'api/trade/',

@@ -12,7 +12,7 @@ import {Observable} from 'rxjs';
 })
 export class MarketdataComponent {
 
-  private url = URLs.baseUrl + URLs.tradeEndpoint;
+  private url = environement.baseUrl + URLs.tradeEndpoint;
 
   @Input()
   theMarketData: MarketData;

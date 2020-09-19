@@ -8,7 +8,7 @@ import {TradeHistory} from './trade-history';
   providedIn: 'root'
 })
 export class TradeHistoryService {
-  private url = URLs.baseUrl + URLs.tradeHistoryEndpoint;
+  private url = environment.baseUrl + URLs.tradeHistoryEndpoint;
 
   constructor(private httpClient: HttpClient) { }
   getAllTradeHistory(): Observable<Array<TradeHistory>> {

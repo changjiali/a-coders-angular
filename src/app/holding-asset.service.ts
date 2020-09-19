@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {URLs} from '../environments/environment';
+import {URLs, environment} from '../environments/environment';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {Portfolio} from './portfolio';
@@ -10,7 +10,7 @@ import {HoldingAsset} from './holding-asset';
 })
 export class HoldingAssetService {
 
-  private url = URLs.baseUrl + URLs.tradeHistoryEndpoint;
+  private url = environment.baseUrl + URLs.tradeHistoryEndpoint;
 
   constructor(private httpClient: HttpClient) { }
 

@@ -3,7 +3,7 @@ import {Observable} from 'rxjs';
 import {HoldingAssetService} from '../holding-asset.service';
 import {HoldingAsset} from '../holding-asset';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
-import {URLs} from '../../environments/environment';
+import {URLs, environment} from '../../environments/environment';
 
 @Component({
   selector: 'app-holding-asset',
@@ -13,7 +13,7 @@ import {URLs} from '../../environments/environment';
 export class HoldingAssetComponent {
 
   holdingAsset: Observable<Array<HoldingAsset>>;
-  private url = URLs.baseUrl + URLs.tradeEndpoint;
+  private url = environment.baseUrl + URLs.tradeEndpoint;
 
   constructor(holdingAssetService: HoldingAssetService, private httpClient: HttpClient){
     this.holdingAsset = holdingAssetService.getHoldingAsset();

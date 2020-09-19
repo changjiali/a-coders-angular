@@ -3,14 +3,14 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 import { BehaviorSubject, Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/internal/operators/catchError';
 import { map } from 'rxjs/operators';
-import {URLs} from '../environments/environment';
+import {URLs, environment} from '../environments/environment';
 //mport { User } from '@/_models';
 
 @Injectable({ providedIn: 'root' })
 export class AuthenticationService {
     public currentToken: Observable<any>;
     public currentUserToken: BehaviorSubject<String>;
-    private url = URLs.baseUrl + URLs.loginEndpoint;
+    private url = environment.baseUrl + URLs.loginEndpoint;
 
     constructor(private http: HttpClient) {
         this.currentUserToken = new BehaviorSubject<String>(JSON.parse(localStorage.getItem('currentToken')));

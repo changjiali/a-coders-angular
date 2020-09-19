@@ -2,14 +2,14 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {MarketData} from './marketdata';
-import {URLs} from '../environments/environment';
+import {URLs, environment} from '../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MarketDataService {
 
-  private url = URLs.baseUrl + URLs.marketDataEndpoint;
+  private url = environment.baseUrl + URLs.marketDataEndpoint;
   constructor(private httpClient: HttpClient) {}
 
   getAllMarketData(): Observable<Array<MarketData>> {

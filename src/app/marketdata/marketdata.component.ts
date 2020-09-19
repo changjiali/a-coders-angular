@@ -2,7 +2,7 @@ import {Component, Input, OnInit} from '@angular/core';
 import {MarketData} from '../marketdata';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {MarketDataService} from '../marketdata.service';
-import {URLs} from '../../environments/environment';
+import {URLs, environment} from '../../environments/environment';
 import {Observable} from 'rxjs';
 
 @Component({
@@ -12,7 +12,7 @@ import {Observable} from 'rxjs';
 })
 export class MarketdataComponent {
 
-  private url = environement.baseUrl + URLs.tradeEndpoint;
+  private url = environment.baseUrl + URLs.tradeEndpoint;
 
   @Input()
   theMarketData: MarketData;

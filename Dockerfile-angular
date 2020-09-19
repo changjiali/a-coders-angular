@@ -1,5 +1,5 @@
 FROM node:12-alpine
-MKDIR /app
+RUN MKDIR /app
 WORKDIR /app
 COPY package.json ./
 RUN npm install

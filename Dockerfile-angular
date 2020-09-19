@@ -1,9 +1,7 @@
 FROM node:12-alpine
-RUN mkdir /app
 WORKDIR /app
-COPY package.json /app
-RUN npm install
+COPY package.json ./
 RUN npm install -g @angular/cli@10.1.1
-COPY . /app
+RUN npm insall
 EXPOSE 4200
 ENTRYPOINT ["ng","serve", "--host", "0.0.0.0", "--disable-host-check" ]

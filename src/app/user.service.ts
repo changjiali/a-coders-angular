@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 
 @Injectable({ providedIn: 'root' })
 export class UserService {
-    private url = URLs.registerService;
+    private url = URLs.baseUrl + URLs.registerEndpoint;
     constructor(private http: HttpClient) { }
 
     register(email: String, username: String, password: String): Observable<any>{

@@ -8,7 +8,7 @@ import {Portfolio} from './portfolio';
   providedIn: 'root'
 })
 export class PortfolioService {
-  private url = URLs.portfolioService;
+  private url = URLs.baseUrl + URLs.portfolioEndpoint;
 
   constructor(private httpClient: HttpClient) { }
   getPortfolio(): Observable<Array<Portfolio>> {

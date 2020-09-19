@@ -9,7 +9,7 @@ import {URLs} from '../environments/environment';
 })
 export class MarketDataService {
 
-  private url = URLs.marketDataService;
+  private url = URLs.baseUrl + URLs.marketDataEndpoint;
   constructor(private httpClient: HttpClient) {}
 
   getAllMarketData(): Observable<Array<MarketData>> {

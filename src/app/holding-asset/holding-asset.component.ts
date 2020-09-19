@@ -13,7 +13,7 @@ import {URLs} from '../../environments/environment';
 export class HoldingAssetComponent {
 
   holdingAsset: Observable<Array<HoldingAsset>>;
-  private url = URLs.tradeService;
+  private url = URLs.baseUrl + URLs.tradeEndpoint;
 
   constructor(holdingAssetService: HoldingAssetService, private httpClient: HttpClient){
     this.holdingAsset = holdingAssetService.getHoldingAsset();

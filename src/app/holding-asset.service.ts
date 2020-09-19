@@ -10,7 +10,7 @@ import {HoldingAsset} from './holding-asset';
 })
 export class HoldingAssetService {
 
-  private url = URLs.tradeHistoryService;
+  private url = URLs.baseUrl + URLs.tradeHistoryEndpoint;
 
   constructor(private httpClient: HttpClient) { }
 
@@ -20,7 +20,7 @@ export class HoldingAssetService {
     const httpHeaders: HttpHeaders = new HttpHeaders({ token: currentToken.token });
     console.log(currentToken);
     console.log(currentToken.token);
-    let observableResult = this.httpClient.get(this.url + username, {headers: httpHeaders}) as Observable<Array<HoldingAsset>>;
+    let observableResult = this.httpClient.get(this.url + username + '/holdingStock', {headers: httpHeaders}) as Observable<Array<HoldingAsset>>;
     return observableResult;
   }
 }

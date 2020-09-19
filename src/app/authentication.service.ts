@@ -10,7 +10,7 @@ import {URLs} from '../environments/environment';
 export class AuthenticationService {
     public currentToken: Observable<any>;
     public currentUserToken: BehaviorSubject<String>;
-    private url = URLs.loginService;
+    private url = URLs.baseUrl + URLs.loginEndpoint;
 
     constructor(private http: HttpClient) {
         this.currentUserToken = new BehaviorSubject<String>(JSON.parse(localStorage.getItem('currentToken')));

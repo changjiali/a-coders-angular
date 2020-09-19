@@ -7,12 +7,13 @@ export const environment = {
 };
 
 export const URLs = {
-  marketDataService: 'http://ip172-18-0-66-bti6sbdim9m0009nule0-8080.direct.labs.play-with-docker.com/api/market/data',
-  tradeService: 'http://ip172-18-0-66-bti6sbdim9m0009nule0-8080.direct.labs.play-with-docker.com/api/trade',
-  tradeHistoryService: 'http://ip172-18-0-66-bti6sbdim9m0009nule0-8080.direct.labs.play-with-docker.com/api/trade/',
-  registerService: 'http://ip172-18-0-66-bti6sbdim9m0009nule0-8080.direct.labs.play-with-docker.com/api/auth/register',
-  loginService: 'http://ip172-18-0-66-bti6sbdim9m0009nule0-8080.direct.labs.play-with-docker.com/api/auth/login',
-  portfolioService: 'http://ip172-18-0-66-bti6sbdim9m0009nule0-8080.direct.labs.play-with-docker.com/api/trade/'
+  baseUrl: 'http://ip172-18-0-10-btiohg5im9m000eolp00-8080.direct.labs.play-with-docker.com/',
+  marketDataEndpoint: 'api/market/data',
+  tradeEndpoint: 'api/trade',
+  tradeHistoryEndpoint: 'api/trade/',
+  registerEndpoint: 'api/auth/register',
+  loginEndpoint: 'api/auth/login',
+  portfolioEndpoint: 'api/trade/'
 };
 /*
  * For easier debugging in development mode, you can import the following file

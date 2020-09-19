@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  baseUrl: 'API_URL'
+  baseUrl: '$API_URL'
 };
 
 export const URLs = {
